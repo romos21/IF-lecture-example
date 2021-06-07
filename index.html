@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p class="area-content-block">Lecture Example Area</p>
+<section class="example-sec">
+    <div>
+        <form id="formEl" enctype="multipart/form-data">
+            <div class="input-row-block">
+                <label>post group:</label>
+                <input type="text" name="group">
+            </div>
+            <div class="input-row-block">
+                <label>tag users:</label>
+                <input type="text" name="tag">
+            </div>
+            <textarea id="formTextArea">type a comment here...</textarea>
+            <input id="fileEl" type="file" name="file">
+            <button type="submit">Send</button>
+        </form>
+        <div class="user-files-block">
+            <div class="create-file-block">
+                <input placeholder="file name" class="new-file-input" id="newFileName" type="text">
+                <textarea class="new-file-textarea" id="newFileTextArea">type a file content here...</textarea>
+                <button class="new-file-btn" id="createFileBtn" type="button">create file</button>
+            </div>
+            <div id='fileListBlock' class="user-files-list-block">
+
+            </div>
+            <div class="canvas-block">
+                <canvas id="canvas-el">canvas</canvas>
+                <div id='stroke-styles' class="canvas-stroke-style">
+                    <div class="canvas-stroke red"></div>
+                    <div class="canvas-stroke green"></div>
+                    <div class="canvas-stroke blue"></div>
+                    <div class="canvas-stroke yellow"></div>
+                    <div class="canvas-stroke white"></div>
+                    <div class="canvas-stroke black"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user-block">
+        <p id="resultMsgEl" class="success-msg-block"></p>
+        <h1>User Posts</h1>
+        <div id="userPostsBlock" class="user-posts-block">
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="fileCreator.js"></script>
+    <script src="canvas.js"></script>
+</section>
+</body>
+</html>
