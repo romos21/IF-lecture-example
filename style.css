@@ -228,3 +228,15 @@ canvas {
 .black {
     background-color: black;
 }
+
+.aliceblue {
+    background-color: aliceblue;
+}
+
+.canvas-current-val-block, .current-canvas-value {
+    display: flex;
+}
+
+.curr-val-label {
+    margin: 0 10px 10px;
+}

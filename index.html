@@ -32,7 +32,19 @@
 
             </div>
             <div class="canvas-block">
-                <canvas id="canvas-el">canvas</canvas>
+                <div class="canvas-current-val-block">
+                    <canvas id="canvas-el">canvas</canvas>
+                    <div>
+                        <div class="current-canvas-value">
+                            <span class="curr-val-label">current color</span>
+                            <div id='currStrokeColor' class="canvas-stroke black"></div>
+                        </div>
+                        <div class="current-canvas-value">
+                            <span class="curr-val-label">clear tool</span>
+                            <span id='clearEl' class="canvas-stroke aliceblue"></span>
+                        </div>
+                    </div>
+                </div>
                 <div id='stroke-styles' class="canvas-stroke-style">
                     <div class="canvas-stroke red"></div>
                     <div class="canvas-stroke green"></div>

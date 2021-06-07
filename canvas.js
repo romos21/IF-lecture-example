@@ -1,16 +1,30 @@
 const canvasEl = document.getElementById('canvas-el');
+const activeEl = document.getElementById('active');
+const currStrokeColor = document.getElementById('currStrokeColor');
+const clearEl = document.getElementById('clearEl');
 const strokeStyles = document.getElementById('stroke-styles');
 
 const strokeStylesValues = strokeStyles.children;
 
 for( let i = 0; i<strokeStylesValues.length; i++) {
-    console.log(strokeStylesValues[i].);
+    strokeStylesValues[i].addEventListener('click', event => {
+        event.preventDefault();
+        context.lineWidth = 1;
+        context.strokeStyle = event.target.className.split(" ")[1];
+        currStrokeColor.className= 'canvas-stroke ' + event.target.className.split(" ")[1];
+        console.log(currStrokeColor.className);
+    })
 }
+
+clearEl.addEventListener('click', event => {
+    event.preventDefault();
+    context.lineWidth = 8;
+    context.strokeStyle = 'aliceblue';
+})
 
 const context = canvasEl.getContext('2d');
 
 context.strokeRect (0, 0, 300, 150);
-context.strokeStyle = 'red';
 
 const w = canvasEl.width;
 const h=canvasEl.height;
